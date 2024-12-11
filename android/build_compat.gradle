@@ -1,0 +1,9 @@
+// String storageUrl = 'https://storage.flutter-io.cn' //System.getenv('FLUTTER_STORAGE_BASE_URL') ?: "https://storage.googleapis.com"
+
+// project.subprojects { p ->
+//     p.repositories {
+//         maven {
+//             url "$storageUrl/download.flutter.io"
+//         }
+//     }
+// }
