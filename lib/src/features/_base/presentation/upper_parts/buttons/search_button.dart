@@ -6,7 +6,9 @@ import 'package:vndb_lite/src/features/_base/presentation/maintab_layout.dart';
 import 'package:vndb_lite/src/features/collection/presentation/collection_appbar_controller.dart';
 import 'package:vndb_lite/src/features/collection/presentation/collection_content_controller.dart';
 import 'package:vndb_lite/src/features/search/presentation/search_screen_controller.dart';
+import 'package:vndb_lite/src/features/sort_filter/presentation/local/local_sort_filter_controller.dart';
 import 'package:vndb_lite/src/features/sort_filter/presentation/remote/remote_sort_filter_controller.dart';
+import 'package:vndb_lite/src/util/alt_provider_reader.dart';
 
 class AppBarSearchButton extends ConsumerWidget {
   const AppBarSearchButton({super.key, this.additionalOnPress});
@@ -14,7 +16,7 @@ class AppBarSearchButton extends ConsumerWidget {
   final VoidCallback? additionalOnPress;
 
   bool get _showIconHighlight {
-    if (textControllerCollection.text.isNotEmpty && App.isInCollectionScreen) {
+    if (ref_.read(localFilterControllerProvider).search.isNotEmpty && App.isInCollectionScreen) {
       return true;
     }
 
@@ -53,7 +55,8 @@ class AppBarSearchButton extends ConsumerWidget {
             return;
           }
 
-          // If not showing yet, then show it.
+          // If not showing yet, then refresh and show it.
+          textControllerCollection.text = ref.read(localFilterControllerProvider).search;
           ref.read(showSearchTextFieldProvider.notifier).state = true;
         }
       },

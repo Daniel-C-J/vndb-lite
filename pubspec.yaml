@@ -2,7 +2,7 @@ name: vndb_lite
 description: "A lite open-source mobile version of your favorite vndb.org website."
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.1+1
 environment:
   sdk: ">=3.4.5 <4.0.0"
 
@@ -29,7 +29,7 @@ dependencies:
 
   # Collection of flag widgets from language or country codes
   flag: ^7.0.0
-  
+
   # Easy and efficient way to check internet connection.
   internet_connection_checker_plus: ^2.5.0
 
@@ -115,7 +115,7 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   build_runner: ^2.4.13
   custom_lint: ^0.7.0
-  
+
   # Helps code faster and lesser.
   riverpod_generator: ^2.6.2
   riverpod_lint: ^2.6.2

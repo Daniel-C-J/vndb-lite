@@ -63,6 +63,9 @@ class _BottomSheetCollectionState extends ConsumerState<BottomSheetCollection> w
             SingleChildScrollView(
               child: Column(
                 children: [
+//
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// Tab header
                   FilterTabHeader(tabController: _tabController),
                   ContentSizeTabBarView(
                     controller: _tabController,
@@ -90,10 +93,6 @@ class _BottomSheetCollectionState extends ConsumerState<BottomSheetCollection> w
                 ],
               ),
             ),
-//
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// Tab header
-
 //
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //

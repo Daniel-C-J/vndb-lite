@@ -8,6 +8,7 @@
 .buildlog/
 .history
 .svn/
+.ancient/
 migrate_working_dir/
 TODO.txt
 ver.txt

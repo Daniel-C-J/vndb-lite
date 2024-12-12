@@ -52,9 +52,7 @@ class AppbarSearchfield extends ConsumerWidget {
       alignment: Alignment.center,
       padding: EdgeInsets.only(
         left: responsiveUI.own(0.055),
-        // bottom: responsiveUI.own(0.025),
       ),
-      // color: Colors.red,
       child: ValueListenableBuilder(
         valueListenable: controller,
         builder: (context, value, child) {
