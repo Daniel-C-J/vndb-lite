@@ -16,7 +16,7 @@ final Map<String, OthersScreenOption> OTHERS_SCREEN_OPTIONS = {
     routeName: OthersOptionCode.bug.name,
     leading: Icons.bug_report,
     title: "Report a bug",
-    subtitle: "Clicking this will redirect to github.",
+    subtitle: "Clicking this will redirect you to github.",
   ),
   OthersOptionCode.sync.name: OthersScreenOption(
     routeName: AppRoute.auth.name,

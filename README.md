@@ -137,7 +137,7 @@ Here are the features:
 8. Offline mode (Once entering vn detail screen)
 <br><img src ="./media/feature/offline_mode.gif" width=150></img>
 
-9. Double-click to censor/uncensor cover👀.
+9. Double-click to censor/uncensor cover 👀
 10. (งツ)ว And many more...!
 
 > [!WARNING]
