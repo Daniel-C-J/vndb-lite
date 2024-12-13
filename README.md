@@ -29,7 +29,7 @@ This. is. my. first. app.
 2. I have zero knowledge about it (I came from Cybersecurity field) and I don't go to college to learn any of it.
 3. I am still learning, and I love learning non-formally.
 4. Did you know that in 2024 I consumed for at least 2~3 tbsp of coffee a day for around 250± days straight?
-5. Consider donating me so I can feed kenzo (my dog 🐕) :v.
+5. Consider donating me so I can feed Kenz (my dog 🐕) :v.
 
 Without any knowledge whatsoever, I took the risk to create one app designed to help people —especially weebs out there— to be able to explore VNDB effortlessly and enjoyably. I'd like to offer them a better UI and UX while maintaining the same functionality as the web itself has. And it is a fact that it is not easy. It is really hard. 
 
@@ -148,7 +148,7 @@ Here are the features:
 > The same thing happens when **deleting** an item from the cloud, once synchronizing again, if the item still exists in local, then it will go back to the cloud (in a form of a backup). The only thing that local tolerated with cloud changes, is that **adding** a new item from the cloud, and that will be saved in the local.
 > 4. The ability to immediately synchronize lot of vns (probably 60+) at once in a single synchronization. There are times when your cloud vns are not fully synchronized in the local collection after the first time synchronization, especially if you've lots of vns in your vndb collection. Make sure that after a short delay, try to synchronize again until it fully indexing all of your cloud vns in the local collection.
 >
-> *Consider changing your collection via vndb.org first to make sure that all of your VNs are valid when synchronizing using this app.
+> **Consider changing your collection via vndb.org first to make sure that all of your VNs are valid when synchronizing using this app.**
 
 
 Dev note:
