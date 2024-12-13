@@ -3,6 +3,7 @@ import 'package:vndb_lite/src/app.dart';
 import 'package:vndb_lite/src/common_widgets/generic_shadowy_text.dart';
 import 'package:vndb_lite/src/core/app/responsive.dart';
 
+// TODO filter options lag.
 class FilterItem extends StatelessWidget {
   const FilterItem({
     super.key,
