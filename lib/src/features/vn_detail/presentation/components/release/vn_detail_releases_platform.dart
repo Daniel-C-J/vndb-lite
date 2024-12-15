@@ -20,14 +20,15 @@ class VnDetailReleasesPlatform extends StatelessWidget {
 
   Future<Widget> get _platformWidgets async {
     final List<Widget> platforms = [];
+    bool hasOthers = false;
 
     for (String platformCode in (p2.platforms ?? [])) {
       final String platformName =
-          PLATFORM_DATA.containsKey(platformCode) ? PLATFORM_DATA[platformCode]! : 'others';
+          PLATFORM_DATA.containsKey(platformCode) ? PLATFORM_DATA[platformCode]! : 'oth';
       final String imagePath = "assets/images/os_image/$platformCode.png";
 
-      if (platformName == 'others' && !platforms.contains(const SizedBox.shrink())) {
-        platforms.add(const SizedBox.shrink());
+      if (platformName.contains('oth')) {
+        hasOthers = true;
         continue;
       }
 
@@ -66,21 +67,19 @@ class VnDetailReleasesPlatform extends StatelessWidget {
       );
     }
 
-    return await _getFinalPlatformWidget(platforms);
+    return await _getFinalPlatformWidget(platforms, hasOthers);
   }
 
 //
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //
 
-  Future<Widget> _getFinalPlatformWidget(List<Widget> platforms) async {
+  Future<Widget> _getFinalPlatformWidget(List<Widget> platforms, bool hasOthers) async {
     if (platforms.isEmpty) {
       platforms.add(ShadowText('--'));
     }
 
-    if (platforms.contains(const SizedBox.shrink())) {
-      platforms.remove(const SizedBox.shrink());
-
+    if (hasOthers) {
       // Adds at the end of the list.
       platforms.add(
         Container(

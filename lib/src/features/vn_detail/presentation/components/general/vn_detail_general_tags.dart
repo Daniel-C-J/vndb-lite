@@ -96,48 +96,51 @@ class _VnDetailGeneralTagsState extends ConsumerState<VnDetailGeneralTags> {
         right: responsiveUI.own(0.02),
         bottom: responsiveUI.own(0.02),
       ),
-      child: CustomLabel(
-        onTap: () async {
-          // Search Configurations to search the corresponding vn tag.
-          final text = " ";
-          textControllerSearch.text = text;
+      child: Tooltip(
+        message: 'Search for VNs with "${tag.name}" tag.',
+        child: CustomLabel(
+          onTap: () async {
+            // Search Configurations to search the corresponding vn tag.
+            final text = " ";
+            textControllerSearch.text = text;
 
-          final filter = Default.REMOTE_FILTER_CONF.copyWith(
-            tag: [VnTag(id: tag.id, name: tag.name)],
-            search: text,
-            andOr: "and",
-          );
-          final sort = Default.REMOTE_SORT_CONF.copyWith(
-            sort: SortableCode.rating.name,
-            reverse: true,
-          );
+            final filter = Default.REMOTE_FILTER_CONF.copyWith(
+              tag: [VnTag(id: tag.id, name: tag.name)],
+              search: text,
+              andOr: "and",
+            );
+            final sort = Default.REMOTE_SORT_CONF.copyWith(
+              sort: SortableCode.rating.name,
+              reverse: true,
+            );
 
-          ref.read(tempRemoteFilterControllerProvider.notifier).importFilterData(filter);
-          ref.read(appliedRemoteFilterControllerProvider.notifier).importFilterData(filter);
+            ref.read(tempRemoteFilterControllerProvider.notifier).importFilterData(filter);
+            ref.read(appliedRemoteFilterControllerProvider.notifier).importFilterData(filter);
 
-          ref.read(tempRemoteSortControllerProvider.notifier).importSortData(sort);
-          ref.read(appliedRemoteSortControllerProvider.notifier).importSortData(sort);
+            ref.read(tempRemoteSortControllerProvider.notifier).importSortData(sort);
+            ref.read(appliedRemoteSortControllerProvider.notifier).importSortData(sort);
 
-          await AppBarRefreshButton.tap();
+            await AppBarRefreshButton.tap();
 
-          // Go to search screen.
-          context.goNamed(AppRoute.search.name);
+            // Go to search screen.
+            context.goNamed(AppRoute.search.name);
 
-          // Initiate search.
-          ref.read(searchScreenControllerProvider.notifier).searchWithCurrentConf();
-        },
-        useBorder: true,
-        borderColor: (tag.spoiler! < spoilerLimit[0])
-            ? Colors.transparent
-            : (tag.spoiler! < spoilerLimit[1] ? Colors.yellow : Colors.red),
-        children: [
-          ShadowText('${tag.name} '),
-          ShadowText(
-            tag.rating!.toDouble().toStringAsFixed(1),
-            color: App.themeColor.secondary,
-            fontSize: responsiveUI.own(0.03),
-          ),
-        ],
+            // Initiate search.
+            ref.read(searchScreenControllerProvider.notifier).searchWithCurrentConf();
+          },
+          useBorder: true,
+          borderColor: (tag.spoiler! < spoilerLimit[0])
+              ? Colors.transparent
+              : (tag.spoiler! < spoilerLimit[1] ? Colors.yellow : Colors.red),
+          children: [
+            ShadowText('${tag.name} '),
+            ShadowText(
+              tag.rating!.toDouble().toStringAsFixed(1),
+              color: App.themeColor.secondary,
+              fontSize: responsiveUI.own(0.03),
+            ),
+          ],
+        ),
       ),
     );
   }
