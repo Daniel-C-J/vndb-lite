@@ -29,7 +29,7 @@ This. is. my. first. app.
 2. I have zero knowledge about it (I came from Cybersecurity field) and I don't go to college to learn any of it.
 3. I am still learning, and I love learning non-formally.
 4. Did you know that in 2024 I consumed for at least 2~3 tbsp of coffee a day for around 250± days straight?
-5. Consider donating me so I can feed Kenz (my dog 🐕) :v.
+5. ~Consider donating me so I can feed Kenz (my dog 🐕) :v~ Kenz died recently just before 2025. One of the worst year ending in my life.
 
 Without any knowledge whatsoever, I took the risk to create one app designed to help people —especially weebs out there— to be able to explore VNDB effortlessly and enjoyably. I'd like to offer them a better UI and UX while maintaining the same functionality as the web itself has. And it is a fact that it is not easy. It is really hard. 
 
